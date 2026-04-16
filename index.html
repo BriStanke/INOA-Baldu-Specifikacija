@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="lt">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Baldų Specifikacija – INOA Studio Pro</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/mobile.css" />
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles-extended.css">
+  <link rel="stylesheet" href="css/mobile.css">
 </head>
 <body>
 <div class="app" id="app">
-
-  <!-- ══════════════ SIDEBAR ══════════════ -->
+  <!-- SIDEBAR -->
   <div class="sidebar" id="sidebar">
     <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
       <span class="hamburger"></span>
@@ -55,13 +55,7 @@
 
     <!-- Search -->
     <div class="search-panel">
-      <input 
-        type="text" 
-        id="searchInput" 
-        class="search-input" 
-        placeholder="Ieškoti..." 
-        data-i18n-placeholder="search"
-      />
+      <input type="text" id="searchInput" class="search-input" placeholder="Ieškoti..." data-i18n-placeholder="search" />
       <button class="search-clear" id="searchClear" style="display: none;">✕</button>
     </div>
 
@@ -94,12 +88,10 @@
     </div>
   </div>
 
-  <!-- Overlay for mobile -->
   <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-  <!-- ══════════════ MAIN ══════════════ -->
+  <!-- MAIN -->
   <div class="main" id="main">
-    <!-- Toolbar -->
     <div class="toolbar" id="toolbar">
       <button class="tool-btn" id="undoBtn" disabled title="Undo (Ctrl+Z)">
         <span>↶</span>
@@ -126,48 +118,7 @@
       <div id="pagesContainer" class="pages-container"></div>
     </div>
   </div>
-
 </div>
-
-<!-- ══════════════ MODALS ══════════════ -->
-
-<!-- Template Modal -->
-<div class="modal" id="templateModal">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h2 data-i18n="chooseTemplate">Pasirinkite šabloną</h2>
-      <button class="modal-close">&times;</button>
-    </div>
-    <div class="modal-body" id="templateList"></div>
-  </div>
-</div>
-
-<!-- Gallery Modal -->
-<div class="modal" id="galleryModal">
-  <div class="modal-content modal-large">
-    <div class="modal-header">
-      <h2 data-i18n="imageGallery">Nuotraukų galerija</h2>
-      <button class="modal-close">&times;</button>
-    </div>
-    <div class="modal-body">
-      <div class="gallery-grid" id="galleryGrid"></div>
-    </div>
-  </div>
-</div>
-
-<!-- Item Edit Modal -->
-<div class="modal" id="itemEditModal">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h2 data-i18n="editItem">Redaguoti prekę</h2>
-      <button class="modal-close">&times;</button>
-    </div>
-    <div class="modal-body" id="itemEditForm"></div>
-  </div>
-</div>
-
-<!-- Hidden file input for import -->
-<input type="file" id="importFileInput" accept=".json" style="display: none;" />
 
 <!-- Toast notifications -->
 <div class="toast-container" id="toastContainer"></div>
@@ -178,7 +129,10 @@
   <div class="loading-text" data-i18n="loading">Kraunama...</div>
 </div>
 
-<!-- Scripts -->
+<!-- Hidden file input for import -->
+<input type="file" id="importFileInput" accept=".json" style="display: none;" />
+
+<!-- Scripts - MUST BE IN THIS ORDER -->
 <script src="js/config.js"></script>
 <script src="js/i18n.js"></script>
 <script src="js/storage.js"></script>
@@ -189,8 +143,6 @@
 <script src="js/data.js"></script>
 <script src="js/render.js"></script>
 <script src="js/ui.js"></script>
-<script src="js/export.js"></script>
-<script src="js/print.js"></script>
 <script src="js/app.js"></script>
 
 </body>
